@@ -1,3 +1,3 @@
 # Maggelan-Orbit
 
-/data/ - odf files
+/data/odf/ - odf files
