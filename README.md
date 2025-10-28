@@ -1,3 +1,5 @@
-# Maggelan-Orbit
+# Messenger-Orbit
 
-/data/odf/ - odf files
+/data/pds4/ - odf (.dat and .xml) files
+/data/csv/ - csv parsed files
+/python/parser.ipynb - parser
