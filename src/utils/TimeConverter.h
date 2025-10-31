@@ -1,21 +1,18 @@
 //
-// Created by magofrays on 10/31/25.
+// Created by magofrays on 10/26/25.
 //
 
-#ifndef MESSENGERORBIT_TIMECONVERTER_H
-#define MESSENGERORBIT_TIMECONVERTER_H
-#include <SpiceZdf.h>
-#include <string>
+#ifndef MAGELLANORBIT_TIMECONVERTER_H
+#define MAGELLANORBIT_TIMECONVERTER_H
 
+#include <iomanip>
 
-class TimeConverter
-{
-    TimeConverter();
-    static TimeConverter& get_instance();
-    public:
-    static SpiceDouble to_tdb(const std::string& utc);
-    static std::string to_utc(SpiceDouble tdb);
+class TimeConverter {
+public:
+    static std::string jdToCalendarString(double jd, bool include_era = true);
+
+    static void jdToCalendar(double jd, int& year, int& month, int& day,
+                            int& hours, int& minutes, double& seconds);
 };
 
-
-#endif //MESSENGERORBIT_TIMECONVERTER_H
+#endif //MAGELLANORBIT_TIMECONVERTER_H
