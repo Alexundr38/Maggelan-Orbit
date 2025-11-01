@@ -24,16 +24,7 @@ struct BodyState
     }
 
     BodyState(const Vec3d& position, const Vec3d& velocity, SpiceDouble time, SpiceDouble light_time);
-    friend std::ostream& operator<<(std::ostream& os, const BodyState& state) {
-        os << std::fixed << std::setprecision(6);
-        os << "Time: " << state.time << " TDB\n";
-        os << "Light time: " << state.light_time << " s\n";
-        os << "Position: (" << state.position.x << ", "
-           << state.position.y << ", " << state.position.z << ") km\n";
-        os << "Velocity: (" << state.velocity.x << ", "
-           << state.velocity.y << ", " << state.velocity.z << ") km/s";
-        return os;
-    }
+    friend std::ostream& operator<<(std::ostream& os, const BodyState& state);
 };
 
 

@@ -21,16 +21,19 @@ FetchContent_MakeAvailable(cspice yaml-cpp)
 add_executable(MessengerOrbit src/types/Vec3d.cpp
         src/types/BodyState.cpp
         src/types/BodyState.h
-        src/types/BodyData.cpp
-        src/types/BodyData.h
+        src/space/SpaceObject.cpp
+        src/space/SpaceObject.h
         src/utils/PropertiesReader.h
         src/utils/PathResolver.h
         src/main.cpp
-        src/space/SpaceBodyManager.cpp
-        src/space/SpaceBodyManager.h
+        src/utils/SpaceObjectManager.cpp
+        src/utils/SpaceObjectManager.h
         src/utils/TimeConverter.cpp
         src/utils/TimeConverter.h
         src/utils/PropertiesReader.cpp
+        src/space/SpaceObjectEntity.cpp
+        src/space/SpaceObjectEntity.h
+        src/utils/PathResolver.cpp
 )
 target_include_directories(MessengerOrbit PRIVATE ${cspice_SOURCE_DIR}/include)
 target_link_directories(MessengerOrbit PRIVATE ${cspice_SOURCE_DIR}/lib)

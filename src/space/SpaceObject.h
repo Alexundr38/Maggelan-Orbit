@@ -4,18 +4,20 @@
 
 #ifndef MESSENGERORBIT_BODYDATA_H
 #define MESSENGERORBIT_BODYDATA_H
+#include <map>
 #include <vector>
 
-#include "BodyState.h"
+#include "../types/BodyState.h"
 
 
-class BodyData
+class SpaceObject
 {
-    private:
-    std::vector<BodyState> bodyStates;
+    protected:
+    std::map<SpiceDouble, BodyState> body_states;
     public:
     [[nodiscard]] std::vector<BodyState> get_body_states() const;
-    void addBodyState(const BodyState& body_state);
+    void add_body_state(const BodyState& body_state);
+    BodyState get_body_state(SpiceDouble tdb);
 };
 
 
